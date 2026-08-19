@@ -6,6 +6,10 @@ The image bundles the trained `Dataset113_DMG_BRATSPEDS_BCHPrePost` model
 (`nnUNetTrainer__nnUNetResEncUNetLPlans__3d_fullres`, 5 folds) and runs prediction as its
 entrypoint, so a container run only needs an input and an output volume.
 
+## Data
+
+The model runs on SRI-24 co-registered brain images of multi-parametric (T1 pre-contrast, T1 post-contrast, T2, FLAIR) MRI scans.
+
 ## Model
 
 | Property | Value |
