@@ -82,9 +82,6 @@ All defaults can be overridden with environment variables:
 | `INPUT_DIR` | `/input` | Input directory |
 | `OUTPUT_DIR` | `/output` | Output directory |
 | `INPUT_NAMING` | `auto` | Force a layout: `auto`, `nnunet`, or `brats` |
-| `CONFIGURATION` | `3d_fullres` | nnU-Net configuration |
-| `TRAINER` | `nnUNetTrainer` | Trainer name |
-| `PLANS` | `nnUNetResEncUNetLPlans` | Plans identifier |
 | `FOLDS` | `0 1 2 3 4` | Folds to ensemble |
 
 Extra arguments are forwarded to `nnUNetv2_predict`, e.g. to use a single fold and
