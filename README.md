@@ -26,27 +26,13 @@ Input channels, in order:
 
 Output labels: `1` = enhancing tumor, `2` = whole tumor (non-enhancing remainder).
 
-## Building
-
-The model weights are not tracked in git. Copy them from the local nnU-Net results
-folder first, then build:
-
-```bash
-bash copy_models.bash
-cd docker
-docker build -t dmg_tracker .
-```
-
-`copy_models.bash` rsyncs only `dataset.json`, `plans.json`, and `checkpoint_final.pth`
-for each fold into `docker/models/`.
-
 ## Running
 
 ```bash
 docker run --rm --gpus '"device=0"' --shm-size=8g \
     -v /path/to/input:/input:ro \
     -v /path/to/output:/output \
-    dmg_tracker
+    ghcr.io/aim-kannlab/dmg-tracker-inference:latest
 ```
 
 `--shm-size` must be raised above Docker's 64 MB default, otherwise nnU-Net's background
@@ -110,7 +96,7 @@ docker run --rm --gpus '"device=0"' --shm-size=8g \
     -e FOLDS=0 \
     -v /path/to/input:/input:ro \
     -v /path/to/output:/output \
-    dmg_tracker --disable_tta
+    ghcr.io/aim-kannlab/dmg-tracker-inference:latest --disable_tta
 ```
 
 ## Requirements
