@@ -82,7 +82,6 @@ All defaults can be overridden with environment variables:
 | `INPUT_DIR` | `/input` | Input directory |
 | `OUTPUT_DIR` | `/output` | Output directory |
 | `INPUT_NAMING` | `auto` | Force a layout: `auto`, `nnunet`, or `brats` |
-| `DATASET_ID` | `113` | nnU-Net dataset id |
 | `CONFIGURATION` | `3d_fullres` | nnU-Net configuration |
 | `TRAINER` | `nnUNetTrainer` | Trainer name |
 | `PLANS` | `nnUNetResEncUNetLPlans` | Plans identifier |
